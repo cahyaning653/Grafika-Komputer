@@ -1,0 +1,15 @@
+# Ukuran layar
+lebar = 10
+tinggi = 5
+
+# Posisi titik
+x, y = 3, 2
+
+# Simulasi koordinat layar
+for i in range(tinggi):
+    for j in range(lebar):
+        if i == y and j == x:
+            print("X", end=" ")
+        else:
+            print(".", end=" ")
+    print()

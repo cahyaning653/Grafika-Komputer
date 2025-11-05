@@ -1,0 +1,15 @@
+# 1. Grid 10x10
+grid = [["." for _ in range(10)] for _ in range(10)]
+
+# 2. Ubah posisi (4,6) jadi 'X'
+x, y = 4, 6
+grid[y][x] = "X"
+
+# 3. Gambar garis dari (0,0) ke (5,3)
+for i in range(6):
+    j = int((3/5) * i)  # rumus sederhana y = (3/5)x
+    grid[j][i] = "X"
+
+# Tampilkan grid
+for baris in grid:
+    print(" ".join(baris))

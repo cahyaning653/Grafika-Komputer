@@ -1,0 +1,25 @@
+import math
+
+# Input dua titik
+x1, y1 = map(float, input("Masukkan koordinat titik pertama (x1 y1): ").split())
+x2, y2 = map(float, input("Masukkan koordinat titik kedua (x2 y2): ").split())
+
+# Hitung jarak antara dua titik
+jarak = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+print(f"\nJarak antara dua titik: {jarak:.2f}")
+
+# Tentukan kuadran titik pertama
+if x1 > 0 and y1 > 0:
+    kuadran = "Kuadran I"
+elif x1 < 0 and y1 > 0:
+    kuadran = "Kuadran II"
+elif x1 < 0 and y1 < 0:
+    kuadran = "Kuadran III"
+elif x1 > 0 and y1 < 0:
+    kuadran = "Kuadran IV"
+elif x1 == 0 and y1 == 0:
+    kuadran = "Titik asal (0,0)"
+else:
+    kuadran = "Berada di sumbu X atau Y"
+
+print(f"Titik pertama berada di: {kuadran}")
